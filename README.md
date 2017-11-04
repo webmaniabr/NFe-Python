@@ -9,9 +9,12 @@ Através do emissor de Nota Fiscal da WebmaniaBR®, você conta com a emissão e
 
 - Contrate um dos planos de Nota Fiscal Eletrônica da WebmaniaBR® a partir de R$29,90/mês: [Assine agora mesmo](https://webmaniabr.com/smartsales/nota-fiscal-eletronica/).
 - Possuir a versão do Python 2.0 ou inferior.
+- Instalar a biblioteca [Requests](http://docs.python-requests.org/en/master/).
 - Realize a integração com o seu sistema.
 
 ## Exemplos
+
+Desenvolvimento baseado na biblioteca [Requests](http://docs.python-requests.org/en/master/).
 
 - **statusSefaz**: Verifica se o Sefaz está Online ou Offline.
 - **validadeCertificado**: Verifica se o Certificado A1 é válido e quantos dias faltam para expirar.
