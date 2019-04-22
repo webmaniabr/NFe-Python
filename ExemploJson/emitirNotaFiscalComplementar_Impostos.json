@@ -1,0 +1,27 @@
+{
+	"nfe_referenciada": "00000000000000000000000000000000000000000000",
+	"operacao": 1,
+	"natureza_operacao": "Natureza da operação",
+	"ambiente": 2,
+	"cliente": {
+		"cpf": "000.000.000-00",
+		"nome_completo": "Nome completo",
+		"endereco": "Av. Brg. Faria Lima",
+		"complemento": "Escritorio",
+		"numero": 1000,
+		"bairro": "Itaim Bibi",
+		"cidade": "São Paulo",
+		"uf": "SP",
+		"cep": "00000-000",
+		"telefone": "(00) 0000-0000",
+		"email": "nome@email.com"
+	},
+	"impostos": {
+		"icms": {
+			"codigo_cfop": "6.102",
+			"situacao_tributaria": "900",
+			"bc_icms": "100.00",
+			"valor_icms": "18.00"
+		}
+	}
+}

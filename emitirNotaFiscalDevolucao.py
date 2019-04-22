@@ -1,17 +1,19 @@
 # coding=utf-8
 
-# Status do Sefaz
-#
-# OBS: A utilização do endpoint deve ser realizada como demonstrativo do Status do
-# Sefaz em sua plataforma, sendo necessário trabalhar com cache de ao menos 10 minutos.
-# Não é necessário realizar a requisição antes da emissão de cada Nota Fiscal,
-# porque este procedimento é realizado de forma automática em todos os endpoints.
-
 # Biblioteca de comunicação http/https
 import requests
+# Biblioteca para manipulaçao de json
+import json
+
+# Busca o arquivo que contém o json para Devolução
+with open('ExemploJson/emitirNotaFiscalDevolucao.json', 'r') as json_file:
+   # Carrega o conteudo do arquivo e converte em array
+   array = json.load(json_file)
+   # Converte o array em json novamente
+   json = json.dumps(array)
 
 # Define o Host para a comunicação com a API
-url = "https://webmaniabr.com/api/1/nfe/sefaz/"
+url = "https://webmaniabr.com/api/1/nfe/devolucao/"
 
 # Credenciais de acesso
 headers = {
@@ -24,7 +26,7 @@ headers = {
 }
 
 # Comunicando com a API
-response = requests.request("GET", url, headers=headers)
+response = requests.request("POST", url, data=json, headers=headers)
 
 # Retorno da API
 print(response.text)

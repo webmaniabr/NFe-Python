@@ -1,24 +1,27 @@
 # coding=utf-8
 
-# Informações da Carta de Correção
-#
-# A Carta de Correção Eletrônica (CC-e) é um evento legal e tem por objetivo
-# corrigir algumas informações da NF-e que já foi emitida.
+# Informações da Nota Fiscal Eletrônica
+# Verificar emissaoNotaFiscal.py
+
+# A Nota Fiscal de Ajuste é destinada somente para fins específicos de escrituração
+# contábil para empresas de Lucro Normal ou Presumido, não representando saída ou entrada
+# de produtos. Utilizado para nota de crédito de ICMS como transferência, ressarcimento
+# ou restituição do ICMS.
 
 # Biblioteca de comunicação http/https
 import requests
 # Biblioteca para manipulaçao de json
 import json
 
-# Busca o arquivo que contém o json para Carta de Correção
-with open('ExemploJson/cartaCorrecao.json', 'r') as json_file:
+# Busca o arquivo que contém o json para Ajuste de Nota Fiscal
+with open('ExemploJson/emitirNotaFiscalAjuste.json', 'r') as json_file:
    # Carrega o conteudo do arquivo e converte em array
    array = json.load(json_file)
    # Converte o array em json novamente
    json = json.dumps(array)
 
 # Define o Host para a comunicação com a API
-url = "https://webmaniabr.com/api/1/nfe/cartacorrecao/"
+url = "https://webmaniabr.com/api/1/nfe/ajuste/"
 
 # Credenciais de acesso
 headers = {
@@ -31,7 +34,7 @@ headers = {
 }
 
 # Comunicando com a API
-response = requests.request("POST", url, data=json, headers=headers)
+response = requests.request("PUT", url, data=json, headers=headers)
 
 # Retorno da API
 print(response.text)

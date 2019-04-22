@@ -1,20 +1,21 @@
-'''
-JSON request:
+# coding=utf-8
 
-{
-  "sequencia": "101-109",
-  "motivo": "Inutilização por problemas técnicos.",
-  "ambiente": "1",
-  "serie": "99",
-  "modelo": "1"
-}
-'''
-
+# Biblioteca de comunicação http/https
 import requests
+# Biblioteca para manipulaçao de json
+import json
 
+# Busca o arquivo que contém o json para Inutilizar a Nota Fiscal
+with open('ExemploJson/inutilizarNotaFiscal.json', 'r') as json_file:
+   # Carrega o conteudo do arquivo e converte em array
+   array = json.load(json_file)
+   # Converte o array em json novamente
+   json = json.dumps(array)
+
+# Define o Host para a comunicação com a API
 url = "https://webmaniabr.com/api/1/nfe/inutilizar/"
 
-payload = "{\"sequencia\":\"101-109\",\"motivo\":\"Inutilização por problemas técnicos.\",\"ambiente\":\"1\",\"serie\":\"99\",\"modelo\":\"1\"}"
+# Credenciais de acesso
 headers = {
     'cache-control': "no-cache",
     'content-type': "application/json",
@@ -24,6 +25,8 @@ headers = {
     'x-access-token-secret': "SEU_ACCESS_TOKEN_SECRET"
 }
 
-response = requests.request("PUT", url, data=payload, headers=headers)
+# Comunicando com a API
+response = requests.request("PUT", url, data=json, headers=headers)
 
+# Retorno da API
 print(response.text)

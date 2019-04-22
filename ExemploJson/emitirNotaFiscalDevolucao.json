@@ -1,0 +1,9 @@
+{
+  "chave": "00000000000000000000000000000000000000000000",
+  "natureza_operacao": "Devolução de venda de produção do estabelecimento",
+  "codigo_cfop": "1.202",
+  "produtos": [ 2, 3 ],
+  "quantidade": [ 5, 1 ],
+  "ambiente": "2",
+  "volume": "1"
+}
