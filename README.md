@@ -11,7 +11,7 @@ Através do emissor de Nota Fiscal da Webmania®, você conta com a emissão e a
 
 ## Requisitos
 
-- Contrate um dos planos de Nota Fiscal Eletrônica da Webmania® (Teste 30 dias grátis): [Assine agora mesmo](https://webmaniabr.com/nota-fiscal-eletronica/).
+- Contrate um dos planos de Nota Fiscal Eletrônica da Webmania®: [Assine agora mesmo](https://webmaniabr.com/nota-fiscal-eletronica/#plans-section).
 - Possuir a versão do Python 2.0 ou inferior.
 - Instalar a biblioteca [Requests](http://docs.python-requests.org/en/master/).
 - Realize a integração com o seu sistema.
