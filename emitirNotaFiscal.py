@@ -2,6 +2,8 @@
 
 # Biblioteca de comunicação http/https
 import http.client
+# Biblioteca para requisicoes HTTP
+import requests
 # Biblioteca para manipulaçao de json
 import json
 
